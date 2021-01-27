@@ -47,4 +47,5 @@ exports.calculate = function(req, res) {
   var operand2 = parseInt(req.query.operand2, 10);
 
   res.json({ result: operation(req.query.operand1, req.query.operand2) });
+  
 };
