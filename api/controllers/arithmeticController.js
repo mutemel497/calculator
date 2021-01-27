@@ -23,7 +23,7 @@ exports.calculate = function(req, res) {
     throw new Error("Unspecified operation");
   }
 
-  var operation = operations[req.query.operation];
+  var operation = operations[req.query.operation ];
 
   if (! operation) {
     throw new Error("Invalid operation: " + req.query.operation);
@@ -38,7 +38,7 @@ exports.calculate = function(req, res) {
   }
 
   if (! req.query.operand2 ||
-      ! req.query.operand2.match(/^(-)?[0-9\.]+(e(-)?[0-9]+)?$/) ||
+      ! req.query..operand2.match(/^(-)?[0-9\.]+(e(-)?[0-9]+)?$/) ||
       req.query.operand2.replace(/[-0-9e]/g, '').length > 1) {
     throw new Error("Invalid operand2: " + req.query.operand2);
   }
